@@ -16,27 +16,27 @@ ScreenManager:
 					text: 'Biblioteca (CRAI)'
 					on_press: root.current = 'Biblioteca'
 				Button:
-					text: 'Cobros'
+					text: 'Admisiones'
 					background_color: (1, 2, 3, 4)
-					on_press: root.current = 'video'
+					on_press: root.current = 'Admisiones'
 				Button:
 					background_color: (0.5, 1.5, 3.3, 6.5)
-					text: 'Recepcion'
-					on_press: root.current = 'Recepcion'
+					text: 'Vida Universitaria (VID)'
+					on_press: root.current = 'VID'
 			BoxLayout:
 				orientation:'vertical'
 				Button:
 					background_color: (0.5, 1.5, 3.3, 6.5)
-					text: 'Recepcion'
-					on_press: root.current = 'Recepcion'
+					text: 'Decanato'
+					on_press: root.current = 'Decanato'
 				Button:
 					text: 'Cobros'
 					background_color: (1, 2, 3, 4)
-					on_press: root.current = 'video'
+					on_press: root.current = 'Cobros'
 				Button:
 					background_color: (0.5, 1.5, 3.3, 6.5)
-					text: 'Recepcion'
-					on_press: root.current = 'Recepcion'
+					text: 'Secretaria'
+					on_press: root.current = 'Secretaria'
 			Image:
 				canvas:
 					Rectangle:
@@ -49,6 +49,66 @@ ScreenManager:
 			cols: 1
 			VideoPlayer:
 				source:'biblioteca.mp4'
+				state:'pause'
+			Button:
+				size_hint: (1, None)
+				background_color: (0.5, 1.5, 3.3, 6.5)
+				text:'Menu'
+				on_press: root.current='menu'
+	Screen:
+		name: 'Admisiones'
+		GridLayout:
+			cols: 1
+			VideoPlayer:
+				source:'admisiones.mp4'
+				state:'pause'
+			Button:
+				size_hint: (1, None)
+				background_color: (0.5, 1.5, 3.3, 6.5)
+				text:'Menu'
+				on_press: root.current='menu'
+	Screen:
+		name: 'VID'
+		GridLayout:
+			cols: 1
+			VideoPlayer:
+				source:'vid.mp4'
+				state:'pause'
+			Button:
+				size_hint: (1, None)
+				background_color: (0.5, 1.5, 3.3, 6.5)
+				text:'Menu'
+				on_press: root.current='menu'
+	Screen:
+		name: 'Decanato'
+		GridLayout:
+			cols: 1
+			VideoPlayer:
+				source:'decanato.mp4'
+				state:'pause'
+			Button:
+				size_hint: (1, None)
+				background_color: (0.5, 1.5, 3.3, 6.5)
+				text:'Menu'
+				on_press: root.current='menu'
+	Screen:
+		name: 'Cobros'
+		GridLayout:
+			cols: 1
+			VideoPlayer:
+				source:'cobros.mp4'
+				state:'pause'
+			Button:
+				size_hint: (1, None)
+				background_color: (0.5, 1.5, 3.3, 6.5)
+				text:'Menu'
+				on_press: root.current='menu'
+	Screen:
+		name: 'Secretaria'
+		GridLayout:
+			cols: 1
+			VideoPlayer:
+				source:'secretaria.mp4'
 				state:'pause'
 			Button:
 				size_hint: (1, None)

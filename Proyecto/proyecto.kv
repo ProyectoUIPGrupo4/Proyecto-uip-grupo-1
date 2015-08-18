@@ -1,0 +1,23 @@
+ScreenManager:
+	Screen:
+		name: 'menu'
+		BoxLayout:
+			orientation:'vertical'
+			Button:
+				text: 'Recepcion'
+				on_press: root.current = 'video'
+			Button:
+				text: 'Cobros'
+				on_press: root.current = 'video'
+	Screen:
+		name: 'video'
+		BoxLayout:
+			orientation: 'vertical'
+			GridLayout:
+				cols: 1
+				VideoPlayer:
+					source:'lel.mp4'
+					state:'pause'
+			Button:
+				text:'Menu'
+				on_press: root.current='menu'

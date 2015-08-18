@@ -1,23 +1,57 @@
 ScreenManager:
 	Screen:
 		name: 'menu'
-		BoxLayout:
-			orientation:'vertical'
-			Button:
-				text: 'Recepcion'
-				on_press: root.current = 'video'
-			Button:
-				text: 'Cobros'
-				on_press: root.current = 'video'
+		GridLayout:
+			cols: 2
+			Image:
+				canvas:
+					Rectangle:
+						pos: self.pos
+						size:self.size
+						source: 'uip.jpg'
+			BoxLayout:
+				orientation:'vertical'
+				Button:
+					background_color: (0.5, 1.5, 3.3, 6.5)
+					text: 'Biblioteca (CRAI)'
+					on_press: root.current = 'Biblioteca'
+				Button:
+					text: 'Cobros'
+					background_color: (1, 2, 3, 4)
+					on_press: root.current = 'video'
+				Button:
+					background_color: (0.5, 1.5, 3.3, 6.5)
+					text: 'Recepcion'
+					on_press: root.current = 'Recepcion'
+			BoxLayout:
+				orientation:'vertical'
+				Button:
+					background_color: (0.5, 1.5, 3.3, 6.5)
+					text: 'Recepcion'
+					on_press: root.current = 'Recepcion'
+				Button:
+					text: 'Cobros'
+					background_color: (1, 2, 3, 4)
+					on_press: root.current = 'video'
+				Button:
+					background_color: (0.5, 1.5, 3.3, 6.5)
+					text: 'Recepcion'
+					on_press: root.current = 'Recepcion'
+			Image:
+				canvas:
+					Rectangle:
+						pos: self.pos
+						size:self.size
+						source: 'uip.jpg'
 	Screen:
-		name: 'video'
-		BoxLayout:
-			orientation: 'vertical'
-			GridLayout:
-				cols: 1
-				VideoPlayer:
-					source:'lel.mp4'
-					state:'pause'
+		name: 'Biblioteca'
+		GridLayout:
+			cols: 1
+			VideoPlayer:
+				source:'biblioteca.mp4'
+				state:'pause'
 			Button:
+				size_hint: (1, None)
+				background_color: (0.5, 1.5, 3.3, 6.5)
 				text:'Menu'
 				on_press: root.current='menu'
